@@ -17,11 +17,11 @@ class Owner
   end
   
   def dogs
-   Dog.all.select {|d| d.owner == self}
+   Dog.all.select {|dog| dog.owner == self}
   end
   
   def cats
-    Cat.all.select {|c| c.owner == self}
+    Cat.all.select {|cat| cat.owner == self}
   end
 
   def buy_cat(name)
@@ -33,14 +33,14 @@ class Owner
   end
 
   def walk_dogs
-    dogs.each do |d|
-      d.mood = "happy"
+    dogs.each do |dog|
+      dog.mood = "happy"
     end
   end
   
   def feed_cats
-    cats.each do |c|
-      c.mood = "happy"
+    cats.each do |cat|
+      cat.mood = "happy"
     end
   end
   
