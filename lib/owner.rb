@@ -3,7 +3,7 @@ class Owner
   attr_accessor :cats, :dogs
   
   @@all = []
- owner_count = 0 
+ @@owner_count = 0 
   
   def initialize(name)
     @name = name
